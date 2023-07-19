@@ -33,6 +33,7 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <!--===============================================================================================-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=API_KEY&libraries=places"></script>
     </head>
     <body>
 
@@ -72,8 +73,16 @@ and open the template in the editor.
                         </div>
                         <div class="wrap-input100 validate-input m-b-23" data-validate = "Address is reauired" >
 
-                            <input class="input100" area-hidden="true" type="text" name="address" placeholder="Location">
+                            <input id="autocomplete"  class="input100" area-hidden="true" type="text" name="address" placeholder="Location">
                             <span class="focus-input100 material-icons-outlined"  data-symbol="&#xf1a8;"></span>
+
+				                       <script>
+      var input = document.getElementById('autocomplete');
+      var autocomplete = new google.maps.places.Autocomplete(input,{types: ['(cities)']});
+      google.maps.event.addListener(autocomplete, 'place_changed', function(){
+         var place = autocomplete.getPlace();
+      });
+    </script>
                            
                         </div>
 
