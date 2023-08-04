@@ -3,8 +3,7 @@
   position: relative;
   height: 100px;
   width: 100px;
-  margin: 50px auto;
-   margin-top: 5px;
+  margin: auto;
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 1px 1px 15px -5px black;
@@ -25,15 +24,15 @@
 .avatar-wrapper .profile-pic:after {
   font-family: FontAwesome;
   content: "";
-  top: 0;
+  top: 16px;
   left: 0;
   width: 100%;
   height: 100%;
   position: absolute;
-  font-size: 65px;
-background: rgb(18,222,203);
-background: linear-gradient(90deg, rgba(18,222,203,1) 0%, rgba(11,113,235,1) 29%, rgba(189,1,130,1) 100%);
-  color: #ffffff;
+  font-size: 45px;
+background: #ffffff;
+
+  color: #34495e;
   text-align: center;
 }
 .avatar-wrapper .upload-button {
